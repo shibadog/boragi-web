@@ -2,8 +2,98 @@
 <html lang="jp">
     <head>
         <title>俺たちボラギ団</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <style>
+            body {
+                color: rgb(200, 200, 200);
+                padding: 0;
+                margin: 0;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#191e2b+0,272a33+13,2a2c33+100 */
+                background: rgb(25,30,43); /* Old browsers */
+                background: -moz-linear-gradient(top, rgba(25,30,43,1) 0%, rgba(39,42,51,1) 13%, rgba(42,44,51,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, rgba(25,30,43,1) 0%,rgba(39,42,51,1) 13%,rgba(42,44,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, rgba(25,30,43,1) 0%,rgba(39,42,51,1) 13%,rgba(42,44,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191e2b', endColorstr='#2a2c33',GradientType=0 ); /* IE6-9 */
+            }
+            header {
+                background-color: rgba(42,44,51,1);
+                height: 4rem;
+            }
+            header > * {
+                line-height: 4rem;
+            }
+            .header-contents {
+                text-align: right;
+            }
+            header .badge {
+                border-radius: 1rem;         /* CSS3草案 */  
+                -webkit-border-radius: 1rem; /* Safari,Google Chrome用 */  
+                -moz-border-radius: 1rem;    /* Firefox用 */ 
+                padding: 0.5rem;
+                background-color: rgb(49, 53, 66);
+                font-size: 77%;
+            }
+            header .icon {
+                border-radius: 1rem;         /* CSS3草案 */  
+                -webkit-border-radius: 1rem; /* Safari,Google Chrome用 */  
+                -moz-border-radius: 1rem;    /* Firefox用 */ 
+                border: 1px solid rgb(200, 200, 200);
+                padding-left: 0.3rem;
+                padding-right: 0.3rem;
+                margin-left: 0.5rem;
+            }
+            header .title {
+                font-size: 1.5rem;
+            }
+            .custom-restricted-width {
+                /* To limit the menu width to the content of the menu: */
+                display: inline-block;
+                /* Or set the width explicitly: */
+                /* width: 10em; */
+            }
+            .pure-menu {
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3a4259+0,272a33+28,2a2c33+79,1b1c21+100 */
+                background: rgb(58,66,89); /* Old browsers */
+                background: -moz-linear-gradient(left, rgba(58,66,89,1) 0%, rgba(39,42,51,1) 28%, rgba(42,44,51,1) 79%, rgba(27,28,33,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, rgba(58,66,89,1) 0%,rgba(39,42,51,1) 28%,rgba(42,44,51,1) 79%,rgba(27,28,33,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, rgba(58,66,89,1) 0%,rgba(39,42,51,1) 28%,rgba(42,44,51,1) 79%,rgba(27,28,33,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a4259', endColorstr='#1b1c21',GradientType=1 ); /* IE6-9 */
+                height: 100%;
+            }
+            .pure-menu-list {
+                text-align: center;
+            }
+            .pure-menu-item {
+                font-size: 1.5rem;
+                height: auto;
+                line-height: 4rem;
+                border-bottom: 2px solid rgb(44, 50, 66);
+            }
+        </style>
     </head>
     <body>
-        <h1>俺たちボラギ団（工事中）</h1>
+        <div class="contents pure-g">
+            <header class="pure-u-1 pure-g">
+                <span class="back pure-u-2-24" style="text-align: center;">
+                        <span class="back" style="display: inline-block; width:3rem; height:100%; background-image:url(image/back.svg); background-size:100%; background-position: center center; background-repeat: no-repeat;"></span>
+                </span>
+                <span class="title pure-u-9-24">
+                    <span class="site-name">俺たちボラギ団</span><span class="icon">?</span></span>
+                <span class="header-contents pure-u-12-24">
+                    <span class="badge">ヘッダバッジだよ</span>
+                    <span class="icon">icon</span>
+                </span>
+            </header>
+            <div class="pure-menu custom-restricted-width pure-u-1-6">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">強化</li>
+                    <li class="pure-menu-item">合成</li>
+                </ul>
+            </div>
+            <section class="main-contents pure-u-5-6">
+            </section>
+        </div>
     </body>
 </html>
