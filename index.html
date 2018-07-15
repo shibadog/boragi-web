@@ -51,10 +51,10 @@
 	</head>
 	<body>
 
-	<!-- <nav id="fh5co-main-nav" role="navigation">
+	<nav id="fh5co-main-nav" role="navigation">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 		<div class="js-fullheight fh5co-table">
-			<div class="fh5co-table-cell js-fullheight">
+			<!-- <div class="fh5co-table-cell js-fullheight">
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="work.html">Website</a></li>
@@ -69,16 +69,25 @@
 					<a href="#"><i class="icon-dribbble2"></i></a>
 					<a href="#"><i class="icon-youtube"></i></a>
 				</p>
+			</div> -->
+			<div class="fh5co-table-cell js-fullheight">
+				<label for="user_name" accesskey="u">ユーザ名：</label>
+				<input type="text" name="user_name" id="user_name" />
+				&nbsp;
+				<label for="password" accesskey="u">パスワード：</label>
+				<input type="password" name="password" id="password" />
+				<br /><br />
+				<input type="button" value="ログイン" onClick="login()"/>
 			</div>
 		</div>
-	</nav> -->
+	</nav>
 	
 	<div id="fh5co-page">
 		<header>
 			<div class="container">
 				<div class="fh5co-navbar-brand">
 					<h1 class="text-center"><a class="fh5co-logo" href="index.html">俺たちボラギ団</a></h1>
-					<!-- <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a> -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 				</div>
 			</div>
 		</header>
@@ -381,6 +390,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
 	<!-- Flexslider -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.1/jquery.flexslider.min.js"></script>
+
+	<script src="js/jsbn.js"></script>
+	<script src="js/rng.js"></script>
+	<script src="js/rsa.js"></script>
+	<script src="js/encrypt.js"></script>
 
 	<!-- Main JS -->
 	<script src="js/main.js"></script>

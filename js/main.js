@@ -2,8 +2,6 @@
 	
 	'use strict';
 
-
-
 	// iPad and iPod detection	
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
@@ -16,7 +14,6 @@
 	    );
 	};
 
-
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -25,7 +22,6 @@
 		});
 
 	};
-
 
 	var burgerMenu = function() {
 
@@ -44,20 +40,14 @@
 		})
 	};
 
-
 	// Animations
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
-
 			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
 				i++;
-
 				$(this.element).addClass('item-animate');
 				setTimeout(function(){
-
 					$('body .animate-box.item-animate').each(function(k){
 						var el = $(this);
 						setTimeout( function () {
@@ -67,15 +57,11 @@
 							} else {
 								el.addClass('fadeInUp animated');
 							}
-
 							el.removeClass('item-animate');
 						},  k * 200, 'easeInOutExpo' );
 					});
-					
-				}, 100);
-				
+				}, 100);	
 			}
-
 		} , { offset: '85%' } );
 	};
 
@@ -125,5 +111,28 @@
 		contentWayPoint();
 	});
 
+	window.login = function() {
+		var userName = document.querySelector("#user_name").value;
+		var password = document.querySelector("#password").value;
+		var hash = encrypt(password);
+
+		$.ajax({
+			type: "GET",
+			url: 'https://forum.netmarble.com/api/auth',
+			dataType: "JSON",
+			data: {
+				authType: "1",
+				serverId: "108", // ルナ固定
+				gameCode: "revolutionjp",
+				charName: userName,
+				encryptedPassword: hash,
+				isKeepLogin: true,
+			}
+		}).done(function(data) {
+			console.log(data);
+		}).always(function(data) {
+			console.log(data);
+		});
+	}
 
 }());
