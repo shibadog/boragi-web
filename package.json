@@ -1,0 +1,32 @@
+{
+  "name": "lineage-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.0",
+    "npm": "^6.2.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibadog/boragi-web.git"
+  },
+  "author": "shibadog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shibadog/boragi-web/issues"
+  },
+  "homepage": "https://github.com/shibadog/boragi-web#readme"
+}
