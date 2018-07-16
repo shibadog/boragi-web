@@ -23,6 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/v1/', api);
 
+// CORSを許可する
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://boragi.site");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // catch 404 and forward to error handler           // ルーティングで該当先が無かったら、404画面を表示するミドルウェア。
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
