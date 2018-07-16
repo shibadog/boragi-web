@@ -117,16 +117,12 @@
 		var hash = encrypt(password);
 
 		$.ajax({
-			type: "GET",
-			url: 'https://forum.netmarble.com/api/auth',
+			type: "POST",
+			url: 'https://boragi.ga/api/v1/login',
 			dataType: "JSON",
 			data: {
-				authType: "1",
-				serverId: "108", // ルナ固定
-				gameCode: "revolutionjp",
-				charName: userName,
-				encryptedPassword: hash,
-				isKeepLogin: true,
+				characterName: userName,
+				password: hash,
 			}
 		}).done(function(data) {
 			console.log(data);
